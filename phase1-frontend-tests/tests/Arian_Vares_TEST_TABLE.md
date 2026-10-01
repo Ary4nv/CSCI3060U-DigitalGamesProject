@@ -33,7 +33,7 @@ Scope: Arian Vares only. Fixtures: `fixtures/accounts.txt` (28 chars/line), `fix
 | addcredit/standard_adds_own     | A standard user adds credit to their own account; only the amount is asked                                     |
 | addcredit/over_session_limit    | 1000.01 is over the session limit; refused                                                                     |
 | addcredit/exactly_session_limit | 1000.00 is the highest amount allowed in one session; accepted (boundary)                                      |
-| addcredit/over_max_credit       | Addition would push the account over the 9999.99 maximum; refused even though it's under the session limit     |
+| addcredit/over_max_credit       | Addition would push the account over the 999999.99 maximum; refused even though it's under the session limit     |
 | addcredit/invalid_amount        | Not a real number; refused without crashing                                                                    |
 | addcredit/unknown_user          | Admin names a username that doesn't exist; refused                                                             |
 | list/games_for_sale             | Lists every game currently for sale with name, seller, and price                                               |
