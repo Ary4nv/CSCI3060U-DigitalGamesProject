@@ -1,0 +1,10 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter buyer username:
+Enter seller username:
+ERROR: buyer and seller must be different
+Enter transaction:
+Logout successful.
+Enter transaction:
