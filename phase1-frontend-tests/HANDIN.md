@@ -7,7 +7,7 @@ addcredit 7, list 5, bad_files 4.
 ## Package contents
 
 1. **Test tables (print to PDF):**
-   - `tests/PERSON_A_TEST_TABLE.md` — Person A list (30 tests).
+   - `tests/VICTOR_TEST_TABLE.md` — Person A list (30 tests).
    - Person B equivalent for sell/buy/refund/addcredit/list — still to add.
 2. **Test files (zip of txt files):** every `tests/<group>/<test>/` folder:
    `input.txt`, `expected_terminal.txt`, `expected_daily.txt`
@@ -26,9 +26,9 @@ addcredit 7, list 5, bad_files 4.
   failed transactions never reach the daily file.
 - Daily file keeps the latest session only when one run holds two
   login/logout sessions (overwrite); no-login runs produce no daily file.
-- `PERSON_A_REQUIREMENTS_PROBLEMS.md` records ambiguities
+- `VICTOR_REQUIREMENTS_PROBLEMS.md` records ambiguities
   (42 vs 49/48 line length, END padding, self-delete `02`+`00`,
   permission-first, case-sensitivity) and which tests pin each one.
-- `PERSON_A_OPEN_QUESTIONS.md` records the skipped invalid-user-type test
+- `VICTOR_OPEN_QUESTIONS.md` records the skipped invalid-user-type test
   (no agreed error wording in the foundation doc).
 - Verify before zipping: `./scripts/check_formats.sh` must pass.

@@ -1,4 +1,4 @@
-# Person A — Review Checklist (one sentence per test)
+# Victor Ma (Person A) — Review Checklist (one sentence per test)
 
 Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder and confirm the sentence holds.
 

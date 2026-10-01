@@ -1,4 +1,4 @@
-# Person A — Requirements Problems (ambiguities, contradictions, gaps)
+# Victor Ma (Person A) — Requirements Problems (ambiguities, contradictions, gaps)
 
 Each item says which test(s) cover the assumption. All wording below in backticks is copied from the foundation PDF or handout.
 
@@ -19,7 +19,7 @@ Each item says which test(s) cover the assumption. All wording below in backtick
 
 ## 4. No error wording for invalid user type on create
 - Handout requires asking user type; foundation gives prompt `Enter user type (AA, FS, BS, SS):` but no `ERROR:` wording for a bad type.
-- No test written for this; see PERSON_A_OPEN_QUESTIONS.md.
+- No test written for this; see VICTOR_OPEN_QUESTIONS.md.
 - Would-be cover: none (skipped `create_invalid_usertype`).
 
 ## 5. Self-delete contradicts the handout

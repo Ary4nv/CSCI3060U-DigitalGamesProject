@@ -1,4 +1,4 @@
-# Person A — Test Table (login/logout, create, delete, permissions, invalid input)
+# Victor Ma (Person A) — Test Table (login/logout, create, delete, permissions, invalid input)
 
 Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two minimal permission refusals (BS cannot sell, SS cannot buy). Fixtures: `fixtures/accounts.txt` (28 chars/line), `fixtures/games.txt` (48 chars/line).
 
@@ -35,4 +35,4 @@ Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two 
 | general/permission_sell_as_buystandard | Buy-standard Thistledown7 cannot sell; refused before sell prompts; not written |
 | general/permission_buy_as_sellstandard | Sell-standard CraterJax cannot buy; refused before buy prompts; not written |
 
-Skipped (see PERSON_A_OPEN_QUESTIONS.md): create with invalid user type — no error wording in the foundation PDF, so no test written.
+Skipped (see VICTOR_OPEN_QUESTIONS.md): create with invalid user type — no error wording in the foundation PDF, so no test written.
