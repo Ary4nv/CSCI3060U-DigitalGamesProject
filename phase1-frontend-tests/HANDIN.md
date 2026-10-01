@@ -7,8 +7,8 @@ addcredit 7, list 5, bad_files 4.
 ## Package contents
 
 1. **Test tables (print to PDF):**
-   - `tests/VICTOR_TEST_TABLE.md` — Person A list (30 tests).
-   - Person B equivalent for sell/buy/refund/addcredit/list — still to add.
+   - `tests/VICTOR_TEST_TABLE.md` — Victor Ma list (30 tests).
+   - Arian Vares equivalent for sell/buy/refund/addcredit/list — still to add.
 2. **Test files (zip of txt files):** every `tests/<group>/<test>/` folder:
    `input.txt`, `expected_terminal.txt`, `expected_daily.txt`
    (absent = no daily file expected), `description.txt`,
