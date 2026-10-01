@@ -1,8 +1,0 @@
-Enter transaction:
-Enter username:
-Login successful.
-Enter transaction:
-No games are currently for sale.
-Enter transaction:
-Logout successful.
-Enter transaction:
