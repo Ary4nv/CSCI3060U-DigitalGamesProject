@@ -1,0 +1,6 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Logout successful.
+Enter transaction:

@@ -1,0 +1,1 @@
+Login with username END is refused with invalid username because END is reserved and the following logout is refused with no daily file.

@@ -1,0 +1,1 @@
+Sell attempted by buy-standard Thistledown7 is refused with not allowed for this account type before any sell prompts and is never written.

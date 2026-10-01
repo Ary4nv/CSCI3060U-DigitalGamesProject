@@ -1,0 +1,1 @@
+Delete of unknown GhostAccount99 is refused with no such user and is never written so the daily file holds only the 00 line.

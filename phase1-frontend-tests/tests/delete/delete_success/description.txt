@@ -1,0 +1,1 @@
+Admin deletes existing Nimbus2 successfully so the daily file gets an 02 line with their credit followed by the logout 00 line.

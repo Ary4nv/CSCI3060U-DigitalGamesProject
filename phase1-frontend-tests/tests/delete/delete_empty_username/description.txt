@@ -1,0 +1,1 @@
+Delete with an empty username line is refused with invalid username and is never written to the daily file.
