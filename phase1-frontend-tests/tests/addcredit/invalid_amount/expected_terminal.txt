@@ -1,0 +1,9 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter amount of credit:
+ERROR: invalid amount
+Enter transaction:
+Logout successful.
+Enter transaction:
