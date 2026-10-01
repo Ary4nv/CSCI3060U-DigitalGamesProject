@@ -7,5 +7,10 @@ Enter seller username:
 Enter amount of credit:
 ERROR: invalid amount
 Enter transaction:
+Enter buyer username:
+Enter seller username:
+Enter amount of credit:
+ERROR: invalid amount
+Enter transaction:
 Logout successful.
 Enter transaction:
