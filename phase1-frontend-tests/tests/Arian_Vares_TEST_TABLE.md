@@ -41,3 +41,7 @@ Scope: Arian Vares only. Fixtures: `fixtures/accounts.txt` (28 chars/line), `fix
 | list/read_only                  | Running list twice in a row gives identical output; nothing is written to the daily file                       |
 | list/reflects_new_listing       | A game listed earlier in the session shows up in list right after                                              |
 | list/stays_after_purchase       | A bought game remains listed, since digital copies don't run out                                               |
+| bad_files/corrupt_accounts_file | accounts file has a bad line; login errors out with a format error |
+| bad_files/corrupt_games_file | games file has a bad line; login errors after the username is accepted |
+| bad_files/missing_accounts_file | accounts file doesn't exist; login errors immediately |
+| bad_files/missing_games_file | games file doesn't exist; login errors after the username is accepted |
