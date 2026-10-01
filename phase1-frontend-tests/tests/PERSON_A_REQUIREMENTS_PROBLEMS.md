@@ -34,8 +34,8 @@ Each item says which test(s) cover the assumption. All wording below in backtick
 
 ## 7. Two sessions in one run share one daily file
 - Handout says the daily file is written at logout listing every transaction in the session; it does not say what happens with login-logout-login-logout in one run.
-- Assumption: lines accumulate in order (two `00` lines for two sessions).
-- Covers: `logout/logout_blocks_until_login` (expects `00 QuillFox9...` then `00 MoonlitKai...`).
+- Assumption: the daily file reflects only the most recent session, overwritten at each logout (matches a fresh file write each time, not an accumulating log).
+- Covers: `logout/logout_blocks_until_login` (expects `00 MoonlitKai...` only).
 
 ## 8. Permission check happens before follow-up prompts
 - Foundation rule: at the first error print the error and return to `Enter transaction:` without asking further questions. It does not order privilege vs prompts.
