@@ -20,7 +20,8 @@ esac
 TEST_DIR="$(cd "$TEST_DIR" && pwd)"
 mkdir -p "$OUT_ROOT"
 OUT_ROOT="$(cd "$OUT_ROOT" && pwd)"
-NAME="$(basename "$TEST_DIR")"
+GROUP="$(basename "$(dirname "$TEST_DIR")")"
+NAME="${GROUP}_$(basename "$TEST_DIR")"
 RES="$OUT_ROOT/$NAME"
 mkdir -p "$RES"
 rm -f "$RES"/*
