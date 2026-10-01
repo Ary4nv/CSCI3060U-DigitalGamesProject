@@ -12,9 +12,9 @@ if [ ! -f "$OLD/summary.txt" ] || [ ! -f "$NEW/summary.txt" ]; then
 fi
 
 awk '
-    NR == FNR { old[$3] = $1; next }
+    NR == FNR { old[$2"/"$3] = $1; next }
     {
-        before = old[$3]
+        before = old[$2"/"$3]
         if (before == "") before = "MISSING"
         if (before != $1) {
             label = "CHANGED"
