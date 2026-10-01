@@ -14,8 +14,8 @@ The scripts use `diff`, so the expected output has to match exactly.
 
 We split the tests by transaction mostly so we weren't both editing the same folders.
 
-- Victor Ma: login, logout, create, delete, permission/general invalid input, bad files
-- Arian Vares: sell, buy, refund, addcredit, list
+- Victor Ma: login, logout, create, delete, permission/general invalid input
+- Arian Vares: sell, buy, refund, addcredit, list, bad files
 - Shared work can use transactions from both sides
 
 For the number of tests, we followed the lab clarification: cover each different behavior instead of repeating basically the same failure many times just to pad the count. Each transaction has a normal case plus the failure cases we found. Important boundaries are checked on both sides when needed, e.g. 15/16 characters and 999.99/1000.00.
