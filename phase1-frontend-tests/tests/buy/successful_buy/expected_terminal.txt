@@ -1,0 +1,10 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter game name:
+Enter seller username:
+Game purchased.
+Enter transaction:
+Logout successful.
+Enter transaction:
