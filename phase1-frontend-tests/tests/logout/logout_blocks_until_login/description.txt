@@ -1,1 +1,1 @@
-Create typed after logout is refused with please login first and a new login starts a second session so the daily file holds two 00 lines in order.
+Create typed after logout is refused with please login first, and a new login starts a second session, so the daily file reflects only that newer session.
