@@ -39,3 +39,7 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - list/read_only: list is run twice in a row and both outputs are identical, and nothing is written to the daily file for either call.
 - list/reflects_new_listing: MoonlitKai sells Hollow Paper Kite and list immediately after shows it appended to the end of the listing.
 - list/stays_after_purchase: Thistledown7 buys Starlit Driftwood and list afterward still shows it for sale, since digital copies are not removed from the storefront.
+- bad_files/corrupt_accounts_file: One account line is cut short, so login reports a format error before anything else happens.
+- bad_files/corrupt_games_file: The username is accepted, then one games line is cut short, so login reports a format error at that point.
+- bad_files/missing_accounts_file: The accounts file doesn't exist, so login fails immediately with a file error.
+- bad_files/missing_games_file: The username is accepted, then the games file doesn't exist, so login fails with a file error.
