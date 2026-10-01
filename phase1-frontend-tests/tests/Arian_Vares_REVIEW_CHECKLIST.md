@@ -18,7 +18,7 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - buy/game_not_found: No game is named Nothing Here so buy stops right after the game name with no seller question asked.
 - buy/buying_own_game: MoonlitKai tries to buy their own listing, Starlit Driftwood, and is refused since a seller can't buy their own game.
 - buy/already_owned: Thistledown7 buys Starlit Driftwood successfully, then the identical buy is tried again in the same session and is refused as already owned.
-- buy/seller_over_max_credit: Paying SilverQuasar1 would push them past 9999.99 so the purchase is refused even though the buyer could otherwise afford it.
+- buy/seller_over_max_credit: Paying SilverQuasar1 would push them past 999999.99 so the purchase is refused even though the buyer could otherwise afford it.
 - buy/new_listing_same_session: QuillFox9 lists Fresh Copper Ledger and immediately tries to buy it; the buy is refused since a new listing can't be purchased the same session it was created.
 - buy/admin_can_buy: QuillFox9 successfully buys a game as an admin, proving admins keep buy permission too.
 - refund/successful_refund: QuillFox9 moves 20.00 from MoonlitKai to Thistledown7 and the refund succeeds, writing the 05 line with both usernames and the amount.
