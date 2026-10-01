@@ -1,0 +1,1 @@
+Create of Nimbus2 after deleting Nimbus2 in the same session is still refused with username already exists so only the 02 delete and 00 logout are written.

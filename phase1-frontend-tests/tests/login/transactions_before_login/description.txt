@@ -1,0 +1,1 @@
+Create delete and logout typed before any login are each refused with please login first without further prompts and only the later authenticated session writes a 00 line.

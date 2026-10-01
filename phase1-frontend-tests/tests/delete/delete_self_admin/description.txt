@@ -1,0 +1,1 @@
+Admin deleting self QuillFox9 succeeds and ends the session immediately so the daily file holds an 02 line followed at once by a 00 line with no typed logout.

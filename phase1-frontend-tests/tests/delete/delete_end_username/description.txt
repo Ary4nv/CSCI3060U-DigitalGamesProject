@@ -1,0 +1,1 @@
+Delete with username END is refused with invalid username and is never written to the daily file.

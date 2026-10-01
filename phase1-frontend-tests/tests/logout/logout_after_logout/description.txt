@@ -1,0 +1,1 @@
+A second logout after a successful logout is refused with please login first and the daily file still holds only the first 00 line.
