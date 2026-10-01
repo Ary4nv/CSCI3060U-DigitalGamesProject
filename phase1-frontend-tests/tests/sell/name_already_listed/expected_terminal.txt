@@ -1,0 +1,11 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter game name:
+ERROR: game already for sale
+Enter transaction:
+ERROR: invalid transaction
+Enter transaction:
+Logout successful.
+Enter transaction:
