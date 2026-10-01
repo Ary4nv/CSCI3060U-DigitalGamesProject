@@ -31,7 +31,7 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - addcredit/standard_adds_own: MoonlitKai adds credit to their own account and only the amount is asked, no username prompt, since standard accounts can only add to themselves.
 - addcredit/over_session_limit: 1000.01 is one cent over the 1000.00 session limit so it's refused.
 - addcredit/exactly_session_limit: 1000.00 is the highest amount allowed in one session and is accepted at that exact boundary.
-- addcredit/over_max_credit: SilverQuasar1 is already near the account maximum so even 100.00, which is under the session limit, is refused for pushing them over 9999.99.
+- addcredit/over_max_credit: SilverQuasar1 is already near the account maximum so even 100.00, which is under the session limit, is refused for pushing them over 999999.99.
 - addcredit/invalid_amount: lots is not a number so the addcredit is refused without crashing.
 - addcredit/unknown_user: Ghostwalker12 isn't a real account so the addcredit is refused after a valid amount is entered.
 - list/games_for_sale: Every game in the standard fixture is printed with its name, seller, and price in the order the games file lists them.
