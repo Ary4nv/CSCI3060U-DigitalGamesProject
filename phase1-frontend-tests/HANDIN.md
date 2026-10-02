@@ -1,7 +1,7 @@
 # Phase 1 Hand-in Checklist (Canvas)
 
-Due Friday, October 2nd, 2026, 8:00pm. 71 requirements tests total:
-login 8, logout 3, create 8, delete 6, general 5, sell 11, buy 8, refund 6,
+Due Friday, October 2nd, 2026, 8:00pm. 74 requirements tests total:
+login 8, logout 3, create 9, delete 6, general 5, sell 11, buy 8, refund 8,
 addcredit 7, list 5, bad_files 4.
 
 ## Package contents
