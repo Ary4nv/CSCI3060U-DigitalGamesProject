@@ -1,4 +1,4 @@
-# Person B - Test Table (sell, buy, refund, addcredit, list)
+# Arian Vares - Test Table (sell, buy, refund, addcredit, list)
 
 Scope: Arian Vares only. Fixtures: per-test `accounts.txt` (28 chars/line), per-test `games.txt` (48 chars/line), same shared fixtures as Victor Ma.
 
