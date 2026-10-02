@@ -14,7 +14,7 @@ Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two 
 | login/transactions_before_login | Create, delete, logout before login each refused with please login first; only later login writes daily |
 | logout/logout_not_logged_in | Logout with nobody logged in refused; no daily file |
 | logout/logout_after_logout | Logout after a good logout refused; daily keeps only the first 00 line |
-| logout/logout_blocks_until_login | After logout, create refused; new login starts second session; daily holds two 00 lines in order |
+| logout/logout_blocks_until_login | After logout, create refused; new login starts second session; daily reflects only the newer session, one 00 line|
 | create/create_success | Admin creates NewTester FS; daily gets 01 (zero credit) then 00 |
 | create/create_success_15char | Exactly-15-char FifteenCharUser accepted (boundary); daily 01 then 00 |
 | create/create_too_long | 16-char SixteenCharUser1 refused as username too long; user type never asked; not written |
