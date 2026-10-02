@@ -1,0 +1,12 @@
+can you review and make sure all the folders, info, tests etc are in line with my tests.pdf doc in the temp folder and with the project guidelines?
+
+Your 31 tests match tests.pdf, and the suite covers everything the Phase 1 handout asks for. The checker reports one difference, delete/delete_self_admin, and it's expected: the review notes proposed adding a final logout, but tests.pdf (section 9, last note) records the version without it, which is what's in the repo.
+
+What matches tests.pdf
+
+Tests: all 31 folders match the reference exactly: input.txt, expected_terminal.txt, expected_daily.txt (left out for the 5 no-daily tests), and description.txt. The fixtures are byte-identical to section 4.
+Counts: login 8, logout 3, create 9, delete 6, general 5, and Arian's 43, for 74 in total. These agree with HANDIN.md and the combined hand-in PDF.
+Formats: check_formats.sh passes (accounts 28, games 48, daily lines the right lengths, every daily file ends with 00).
+Scripts: they match section 2 (10 s timeout, the fail rules, results layout).
+Handout: the combined PDF has the test tables, every input and expected-output file, the test plan with the directory tree, the script printouts, and the requirements problems.
+
