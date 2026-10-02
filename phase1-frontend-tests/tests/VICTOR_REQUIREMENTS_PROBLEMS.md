@@ -61,7 +61,7 @@ Each item says which test(s) cover the assumption. All wording below in backtick
 - Covers: `login/login_empty_username`, `login/login_end_username`, `create/create_empty_username`, `create/create_end_username`, `delete/delete_empty_username`, `delete/delete_end_username`.
 
 ## 13. Failed transactions never reach the daily file
-- Foundation states only completed transactions get a line. Every refusal test therefore expects the daily file to omit that transaction (or `NO DAILY FILE WRITTEN` when nobody ever logged in).
+- Foundation states only completed transactions get a line. Every refusal test therefore expects the daily file to omit that transaction (or `the daily file is simply absent` when nobody ever logged in).
 - Covers: all `*_too_long`, `*_duplicate*`, `*_empty*`, `*_end*`, `*_nonexistent`, `*_as_nonadmin`, `invalid_*`, `permission_*`, `login_unknown_user`, etc.
 
 ## 14. Second login does not ask for a username
