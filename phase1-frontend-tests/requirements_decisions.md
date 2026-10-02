@@ -5,7 +5,6 @@ The handout and Slack updates are the sources of requirements. The shared founda
 - Create starts new accounts at 0.00 and does not ask for initial credit. After the blackout ends, we will ask the client to resolve the conflicting Slack answers.
 - Account credit uses nine characters; game prices use six. Usernames use 15 and game names 25, following example widths.
 - Invalid create account types produce `ERROR: invalid user type`. Covered by create/invalid_user_type.
-- A listing paired with a different existing seller produces `ERROR: game is not offered by this seller`. Covered by buy/seller_mismatch.
 - Permissions are checked before follow-up prompts. Non-admin refund uses the existing permission error.
 - Multiple sessions overwrite the daily file at each logout, so the final output contains only the latest session. Failed transactions are omitted. No successful login means no daily file.
 - Admin self-delete ends the session immediately, recording delete then session end.
