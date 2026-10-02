@@ -35,6 +35,6 @@ frontend accounts.txt games.txt daily.txt < input.txt > terminal.txt
 
 ## Work split
 
-- Victor Ma: login, logout, create, delete, permissions/invalid input, bad files
-- Arian Vares: sell, buy, refund, addcredit, list
+- Victor Ma: login, logout, create, delete, permissions/invalid input
+- Arian Vares: sell, buy, refund, addcredit, list, bad files
 - Shared: tests or setup that involve both sides
