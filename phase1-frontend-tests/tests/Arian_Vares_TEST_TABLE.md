@@ -1,6 +1,6 @@
 # Person B - Test Table (sell, buy, refund, addcredit, list)
 
-Scope: Arian Vares only. Fixtures: `fixtures/accounts.txt` (28 chars/line), `fixtures/games.txt` (48 chars/line), same shared fixtures as Victor Ma.
+Scope: Arian Vares only. Fixtures: per-test `accounts.txt` (28 chars/line), per-test `games.txt` (48 chars/line), same shared fixtures as Victor Ma.
 
 | Folder                          | What it tests                                                                                                  |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ Scope: Arian Vares only. Fixtures: `fixtures/accounts.txt` (28 chars/line), `fix
 | refund/same_person_twice        | Same username entered as buyer and seller; refused before an amount is asked                                   |
 | refund/seller_not_enough_credit | Seller's credit is below the refund amount; refused                                                            |
 | refund/buyer_over_max_credit    | Refund would push the buyer over the maximum account credit; refused                                           |
-| refund/invalid_amount           | Checks both a negative amount and 0.00 in one session; both refused                                            |
+| refund/invalid_amount           | Checks negative, zero, and nonnumeric amounts in one session; all refused                                            |
 | addcredit/admin_adds_to_other   | Admin adds credit to another user; amount is asked first, then the username                                    |
 | addcredit/standard_adds_own     | A standard user adds credit to their own account; only the amount is asked                                     |
 | addcredit/over_session_limit    | 1000.01 is over the session limit; refused                                                                     |
@@ -45,3 +45,5 @@ Scope: Arian Vares only. Fixtures: `fixtures/accounts.txt` (28 chars/line), `fix
 | bad_files/corrupt_games_file | games file has a bad line; login errors after the username is accepted |
 | bad_files/missing_accounts_file | accounts file doesn't exist; login errors immediately |
 | bad_files/missing_games_file | games file doesn't exist; login errors after the username is accepted |
+| refund/refund_as_nonadmin | A standard account cannot refund; rejection happens before buyer or seller prompts. |
+| refund/unknown_seller | Refund rejects an unknown seller after accepting an existing buyer. |
