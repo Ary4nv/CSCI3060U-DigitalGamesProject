@@ -38,3 +38,5 @@ frontend accounts.txt games.txt daily.txt < input.txt > terminal.txt
 - Victor Ma: login, logout, create, delete, permissions/invalid input
 - Arian Vares: sell, buy, refund, addcredit, list, bad files
 - Shared: tests or setup that involve both sides
+
+All commits in the GitHub repository appear under one account due to a git configuration issue on Victor's end (his local identity was never set before pushing); actual contribution is documented in the per-person markdown files under tests/ and in the individual Group Feedback Forms submitted separately.
