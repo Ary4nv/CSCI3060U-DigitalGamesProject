@@ -26,7 +26,7 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - refund/same_person_twice: MoonlitKai is entered as both buyer and seller so the refund is refused before an amount is requested.
 - refund/seller_not_enough_credit: CraterJax has 50.00 credit and the refund asks for 100.00 so it's refused.
 - refund/buyer_over_max_credit: SilverQuasar1 is already near the maximum credit so refunding them more is refused even though the seller could afford it.
-- refund/invalid_amount: Both -10 and 0.00 are tried as amounts in the same session and both are refused, confirming negative and zero are rejected the same way.
+- refund/invalid_amount: Negative, zero, and nonnumeric values are tried as amounts in the same session and both are refused, confirming negative and zero are rejected the same way.
 - addcredit/admin_adds_to_other: QuillFox9 adds 50.00 to MoonlitKai, the amount is asked before the username, matching the agreed order for admins.
 - addcredit/standard_adds_own: MoonlitKai adds credit to their own account and only the amount is asked, no username prompt, since standard accounts can only add to themselves.
 - addcredit/over_session_limit: 1000.01 is one cent over the 1000.00 session limit so it's refused.
@@ -43,3 +43,8 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - bad_files/corrupt_games_file: The username is accepted, then one games line is cut short, so login reports a format error at that point.
 - bad_files/missing_accounts_file: The accounts file doesn't exist, so login fails immediately with a file error.
 - bad_files/missing_games_file: The username is accepted, then the games file doesn't exist, so login fails with a file error.
+
+- refund/refund_as_nonadmin: A standard account cannot refund; rejection happens before buyer or seller prompts.
+
+- refund/unknown_seller: Refund rejects an unknown seller after accepting an existing buyer.
+
