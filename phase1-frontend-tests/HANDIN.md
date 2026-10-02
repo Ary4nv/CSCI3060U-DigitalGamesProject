@@ -8,7 +8,7 @@ addcredit 7, list 5, bad_files 4.
 
 1. **Test tables (print to PDF):**
    - `tests/VICTOR_TEST_TABLE.md` — Victor Ma list (30 tests).
-   - `tests/Arian_Vares_TEST_TABLE.md` — Arian Vares list (37 tests).
+   - `tests/Arian_Vares_TEST_TABLE.md` — Arian Vares list (41 tests).
 2. **Test files (zip of txt files):** every `tests/<group>/<test>/` folder:
    `input.txt`, `expected_terminal.txt`, `expected_daily.txt`
    (absent = no daily file expected), `description.txt`,
