@@ -11,8 +11,8 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - login/login_case_mismatch: Usernames are case-sensitive so quillfox9 is no such user and no daily file exists.
 - login/transactions_before_login: Nobody is logged in so create, delete, and logout each give please login first with no follow-up prompts and only the later session writes daily.
 - logout/logout_not_logged_in: Nobody is logged in so logout gives please login first and no daily file exists.
-- logout/logout_after_logout: First logout closes the session and writes 00, so the daily file reflects only the newer session, not both.
-- logout/logout_blocks_until_login: Create after logout gives please login first, then a fresh login works, so the daily file reflects only that newer session, not both.
+- logout/logout_after_logout: First logout writes one 00 record; the second logout is refused and leaves that file unchanged.
+- logout/logout_blocks_until_login: Create after logout is refused until a new login succeeds; the final daily file contains only the second session under our overwrite choice.
 - create/create_success: Admin QuillFox9 plus fresh name NewTester plus type FS passes all checks so daily gets 01 with 000000.00 then 00.
 - create/create_success_15char: FifteenCharUser is exactly 15 characters so the max-length boundary passes and daily gets 01 then 00.
 - create/create_too_long: SixteenCharUser1 is 16 characters so create stops at username too long with no user-type prompt and daily holds only 00.
@@ -32,3 +32,4 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - general/invalid_empty_line: A blank transaction line gives invalid transaction and daily holds only 00.
 - general/permission_sell_as_buystandard: Thistledown7 is BS so sell stops at not allowed for this account type with no sell prompts and daily holds only 00.
 - general/permission_buy_as_sellstandard: CraterJax is SS so buy stops at not allowed for this account type with no buy prompts and daily holds only 00.
+- create/invalid_user_type: Admin create rejects an unsupported account type and writes only the logout record.
