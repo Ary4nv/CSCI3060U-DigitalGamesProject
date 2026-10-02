@@ -5,22 +5,22 @@ Each item says which test(s) cover the assumption. All wording below in backtick
 ## 1. Games file line length: 49 vs 42 vs 48
 - Handout header says `49 characters` lines, constraints say `every line is exactly 42 characters`, game-collection file also says 42. None matches the field math.
 - Foundation 2.2 uses 48, which matches `25 + 1 + 15 + 1 + 6 = 48`. Fixtures use 48 and a length-check script verified every line.
-- Covers: `fixtures/games.txt`, all tests that rely on shared games (none of Person A success paths depend on game content, but fixtures must still be valid).
+- Covers: per-test `games.txt`, all tests that rely on shared games (none of Person A success paths depend on game content, but fixtures must still be valid).
 
 ## 2. END-line exact padding not spelled out
 - Handout: file ends with special user `END` / special game `END` with other fields empty. It does not give the blank padding.
 - Assumption used: username/game field left-justified and space-filled, type/price empty means spaces, so accounts END line is 28 chars and games END line is 48 chars.
-- Covers: `fixtures/accounts.txt`, `fixtures/games.txt`.
+- Covers: per-test `accounts.txt`, per-test `games.txt`.
 
 ## 3. games.txt in the PDF is missing a line break
 - The copy-paste block joins `Quiet Nova Protocol ... 100.00` and `Paperclip Expedition ...` on one visual line.
 - Fixed by splitting into two 48-char lines and verifying with a script.
-- Covers: `fixtures/games.txt`.
+- Covers: per-test `games.txt`.
 
 ## 4. No error wording for invalid user type on create
 - Handout requires asking user type; foundation gives prompt `Enter user type (AA, FS, BS, SS):` but no `ERROR:` wording for a bad type.
-- No test written for this; see VICTOR_OPEN_QUESTIONS.md.
-- Would-be cover: none (skipped `create_invalid_usertype`).
+- Team output choice: `ERROR: invalid user type`.
+- Covered by `create/invalid_user_type`.
 
 ## 5. Self-delete contradicts the handout
 - Handout says delete username must not be the current user; Slack reportedly allowed it; foundation decides the session ends at once with an `02` line immediately followed by a `00` line using the same name/type/credit.
