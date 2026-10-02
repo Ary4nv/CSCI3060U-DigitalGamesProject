@@ -1,6 +1,6 @@
 # Victor Ma (Person A) — Test Table (login/logout, create, delete, permissions, invalid input)
 
-Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two minimal permission refusals (BS cannot sell, SS cannot buy). Fixtures: `fixtures/accounts.txt` (28 chars/line), `fixtures/games.txt` (48 chars/line).
+Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two minimal permission refusals (BS cannot sell, SS cannot buy). Fixtures: per-test `accounts.txt` (28 chars/line), per-test `games.txt` (48 chars/line).
 
 | Folder | What it tests |
 |---|---|
@@ -35,4 +35,6 @@ Scope: Person A only. No sell, buy, refund, addcredit, or list tests except two 
 | general/permission_sell_as_buystandard | Buy-standard Thistledown7 cannot sell; refused before sell prompts; not written |
 | general/permission_buy_as_sellstandard | Sell-standard CraterJax cannot buy; refused before buy prompts; not written |
 
-Skipped (see VICTOR_OPEN_QUESTIONS.md): create with invalid user type — no error wording in the foundation PDF, so no test written.
+| create/invalid_user_type | Admin create rejects an unsupported account type and writes only the logout record. |
+
+Invalid user type is covered by `create/invalid_user_type`; its error wording is a documented team choice.
