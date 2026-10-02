@@ -1,0 +1,1 @@
+A standard account cannot refund; rejection happens before buyer or seller prompts.
