@@ -5,7 +5,7 @@
 # run all tests and save this run in a new results folder
 # usage:  ./scripts/run_all.sh [text]
 # optional argument filters by folder name
-# (for example ./scripts/run_all.sh 06_sell  runs the sell tests only)
+# (for example ./scripts/run_all.sh sell  runs the sell tests only)
 
 SUITE="$(cd "$(dirname "$0")/.." && pwd)"
 FILTER="$1"
