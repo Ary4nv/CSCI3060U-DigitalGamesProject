@@ -12,7 +12,7 @@ Read input.txt vs expected_terminal.txt vs expected_daily.txt for each folder an
 - login/transactions_before_login: Nobody is logged in so create, delete, and logout each give please login first with no follow-up prompts and only the later session writes daily.
 - logout/logout_not_logged_in: Nobody is logged in so logout gives please login first and no daily file exists.
 - logout/logout_after_logout: First logout closes the session and writes 00, so the daily file reflects only the newer session, not both.
-- logout/logout_blocks_until_login: Create after logout gives please login first, then a fresh login works, so daily holds two 00 lines in run order.
+- logout/logout_blocks_until_login: Create after logout gives please login first, then a fresh login works, so the daily file reflects only that newer session, not both.
 - create/create_success: Admin QuillFox9 plus fresh name NewTester plus type FS passes all checks so daily gets 01 with 000000.00 then 00.
 - create/create_success_15char: FifteenCharUser is exactly 15 characters so the max-length boundary passes and daily gets 01 then 00.
 - create/create_too_long: SixteenCharUser1 is 16 characters so create stops at username too long with no user-type prompt and daily holds only 00.
