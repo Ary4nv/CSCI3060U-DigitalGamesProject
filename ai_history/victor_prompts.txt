@@ -1,7 +1,11 @@
+---- ENTRY 1 ----
+PROMPT:
 can you review and make sure all the folders, info, tests etc are in line with my tests.pdf doc in the temp folder and with the project guidelines?
+
 
 Your 31 tests match tests.pdf, and the suite covers everything the Phase 1 handout asks for. The checker reports one difference, delete/delete_self_admin, and it's expected: the review notes proposed adding a final logout, but tests.pdf (section 9, last note) records the version without it, which is what's in the repo.
 
+AI RESPONSE:
 What matches tests.pdf
 
 Tests: all 31 folders match the reference exactly: input.txt, expected_terminal.txt, expected_daily.txt (left out for the 5 no-daily tests), and description.txt. The fixtures are byte-identical to section 4.
@@ -10,3 +14,65 @@ Formats: check_formats.sh passes (accounts 28, games 48, daily lines the right l
 Scripts: they match section 2 (10 s timeout, the fail rules, results layout).
 Handout: the combined PDF has the test tables, every input and expected-output file, the test plan with the directory tree, the script printouts, and the requirements problems.
 
+---- ENTRY 2 ----
+PROMPT:
+Can you double check my code comments to see if all the grammar / wording is good, make any adjustments as necessary, let me know what you changed
+
+AI RESPONSE:
+I've read every comment in your files. Most are fine. Here are the fixes:
+
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Account.cpp
+Modified
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Account.cpp
+Modified
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Game.cpp
+Modified
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\FieldFormat.cpp
+Modified
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Console.cpp
+Added 1 line
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Console.cpp
+Added 1 line
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\DeleteTransaction.cpp
+Added 1 line
+Edit C:\Users\Admin\Documents\Projects\CSCI3060U-DigitalGamesProject\phase2-frontend-prototype\src\Constants.h
+Modified
+5:21 PM
+Rebuilding to make sure only comments changed:
+
+Bash Rebuild and show changed files
+IN
+mingw32-make SHELL=sh -B 2>&1 | tail -3; echo "exit $?"; git diff --stat
+
+OUT
+g++ -std=c++11 -Wall -Wextra -o frontend src/*.cpp
+exit 0
+warning: in the working copy of 'phase2-frontend-prototype/src/Account.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'phase2-frontend-prototype/src/Console.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'phase2-frontend-prototype/src/Constants.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'phase2-frontend-prototype/src/DeleteTransaction.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'phase2-frontend-prototype/src/FieldFormat.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'phase2-frontend-prototype/src/Game.cpp', LF will be replaced by CRLF the next time Git touches it
+ phase2-frontend-prototype/src/Account.cpp           | 4 ++--
+ phase2-frontend-prototype/src/Console.cpp           | 6 ++++--
+ phase2-frontend-prototype/src/Constants.h           | 2 +-
+ phase2-frontend-prototype/src/DeleteTransaction.cpp | 5 +++--
+ phase2-frontend-prototype/src/FieldFormat.cpp       | 4 ++--
+ phase2-frontend-prototype/src/Game.cpp              | 2 +-
+ 6 files changed, 13 insertions(+), 10 deletions(-)
+5:21 PM
+I fixed 8 comments in 6 files. Only comments changed, and it still builds with 0 warnings. Nothing is committed or pushed yet.
+
+File	Before	After	Why
+Account.cpp canBuy	True unless sell-standard.	True unless the account is sell-standard (SS).	Was a fragment
+Account.cpp canSell	True unless buy-standard.	True unless the account is buy-standard (BS).	Was a fragment
+Game.cpp constructor	Makes a game with these values, not listed this session.	Makes a game with these values. It starts as not listed this session.	Read awkwardly
+FieldFormat.cpp parseMoney	...each part is checked to be digits only.	...each part must be digits only.	Simpler
+Console.cpp readLine	Reads one line, removing a trailing carriage return. False at end of input.	Reads one line and removes a trailing carriage return. Returns false at the end of the input.	"False at end of input" was a fragment
+Console.cpp ask	...False at end of input.	...Returns false at the end of the input.	Same
+Constants.h END_MARKER	...last line of an input file, and that can't be used as a name.	...last line of an input file. It can't be used as a name.	Clumsy sentence
+DeleteTransaction.cpp	"copy before removing, the pointer is no good after remove()"	"copy the account first because the pointer is not valid after remove()"	Run-on sentence, and "no good" was too casual
+DeleteTransaction.cpp	"games the deleted user listed are left alone" sat above the self-delete check	Moved up to the remove step; the self-delete check now has its own comment: "an admin who deleted themselves is logged out right away"	It was describing the wrong code
+Left as is: every comment in your .h files except Constants.h, plus Messages.h, main.cpp, the Makefile and the other four transactions. They were already clear and grammatical.
+
+The LF/CRLF lines in the build output are Git's normal Windows line-ending notices, not errors.
