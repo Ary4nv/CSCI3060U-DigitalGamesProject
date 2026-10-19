@@ -27,7 +27,8 @@ void Console::showError(const std::string& message)
 }
 
 // readLine
-// Reads one line, removing a trailing carriage return. False at end of input.
+// Reads one line and removes a trailing carriage return.
+// Returns false at the end of the input.
 bool Console::readLine(std::string& line)
 {
     if (!std::getline(input, line))
@@ -42,7 +43,8 @@ bool Console::readLine(std::string& line)
 }
 
 // ask
-// Prints the prompt, then reads the answer. False at end of input.
+// Prints the prompt, then reads the answer.
+// Returns false at the end of the input.
 bool Console::ask(const std::string& prompt, std::string& answer)
 {
     show(prompt);

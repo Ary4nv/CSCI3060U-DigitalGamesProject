@@ -62,8 +62,8 @@ std::string FieldFormat::moneyDisplay(Cents cents)
 
 // parseMoney
 // Reads typed money ("15", "15.5", "15.50") into cents. The text is split at
-// the dot into a dollars part and a cents part, and each part is checked to
-// be digits only.
+// the dot into a dollars part and a cents part, and each part must be
+// digits only.
 bool FieldFormat::parseMoney(const std::string& text, Cents& cents)
 {
     std::string::size_type pointPosition = text.find(DECIMAL_POINT);

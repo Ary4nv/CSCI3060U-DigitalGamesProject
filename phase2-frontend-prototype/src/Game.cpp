@@ -15,7 +15,7 @@ Game::Game()
 }
 
 // Game
-// Makes a game with these values, not listed this session.
+// Makes a game with these values. It starts as not listed this session.
 Game::Game(const std::string& name, const std::string& seller, Cents price)
     : name(name), seller(seller), price(price), listedThisSession(false)
 {

@@ -30,14 +30,15 @@ void DeleteTransaction::execute() {
         return;
     }
 
-    // copy before removing, the pointer is no good after remove()
+    // copy the account first because the pointer is not valid after remove()
+    // games the deleted user listed are left alone (team decision)
     Account deleted = *found;
     session.getAccounts().remove(username);
     session.getLog().recordAccountLine(Constants::DELETE_CODE, deleted.getUsername(),
                                        deleted.getType(), deleted.getCredit());
     console.show(Messages::USER_DELETED);
 
-    // games the deleted user listed are left alone (team decision)
+    // an admin who deleted themselves is logged out right away
     if (deleted.getUsername() == session.getCurrentUsername()) {
         if (!session.end(deleted)) {
             console.showError(Messages::CANNOT_WRITE_DAILY_FILE);

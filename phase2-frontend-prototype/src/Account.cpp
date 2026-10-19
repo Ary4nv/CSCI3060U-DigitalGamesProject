@@ -93,14 +93,14 @@ bool Account::isAdmin() const
 }
 
 // canBuy
-// True unless sell-standard.
+// True unless the account is sell-standard (SS).
 bool Account::canBuy() const
 {
     return accountType != Constants::SELL_STANDARD_TYPE;
 }
 
 // canSell
-// True unless buy-standard.
+// True unless the account is buy-standard (BS).
 bool Account::canSell() const
 {
     return accountType != Constants::BUY_STANDARD_TYPE;

@@ -59,7 +59,7 @@ namespace Constants
 
     // ----- File markers -----
 
-    // Text that marks the last line of an input file, and that can't be used as a name.
+    // Text that marks the last line of an input file. It can't be used as a name.
     const std::string END_MARKER = "END";
 
     // Character used to fill and separate fixed width file fields.
