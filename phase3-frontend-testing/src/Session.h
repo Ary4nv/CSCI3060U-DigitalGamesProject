@@ -10,10 +10,12 @@
 #include "DailyTransactionLog.h"
 #include "GameCatalog.h"
 
-// The three file names given on the command line.
+// The four file names given on the command line.
 struct FilePaths {
     std::string accountsFile;
     std::string gamesFile;
+    // only kept, the Front End never opens this file (the Back End uses it)
+    std::string gamesCollectionFile;
     std::string dailyFile;
 };
 
@@ -26,7 +28,7 @@ public:
     // Starts with nobody logged in. Keeps the file names for later.
     Session(const FilePaths& filePaths);
 
-    // Returns the three file names.
+    // Returns the four file names.
     const FilePaths& getFilePaths() const;
     // Returns the accounts for this session.
     AccountRegistry& getAccounts();

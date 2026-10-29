@@ -1,0 +1,8 @@
+9c9,10
+< ERROR: username already exists
+---
+> Enter user type (AA, FS, BS, SS):
+> ERROR: invalid user type
+11,12d11
+< Logout successful.
+< Enter transaction:

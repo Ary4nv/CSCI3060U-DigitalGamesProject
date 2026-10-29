@@ -2,7 +2,7 @@
 # run_all_tests.sh
 #
 # Does the whole test process with one command:
-#   1. builds the Front End if it is not built yet
+#   1. builds the Front End (make, so the newest source is always tested)
 #   2. runs every test            (run_tests.sh)
 #   3. checks the daily files     (compare_daily.sh)
 #   4. checks the terminal output (compare_terminal.sh)
@@ -16,14 +16,16 @@
 
 SUITE="$(cd "$(dirname "$0")/.." && pwd)"
 LABEL="$1"
-FRONTEND="${FRONTEND:-$SUITE/distribution-system}"
-export FRONTEND
 
-# build the program if needed
-if [ ! -x "$FRONTEND" ]; then
+# always run make first so the tests never use an old build of the program
+# (make does nothing if the source files did not change)
+# if FRONTEND is set to some other program, that one is tested and make is skipped
+if [ -z "$FRONTEND" ]; then
+    FRONTEND="$SUITE/distribution-system"
     echo "building the Front End"
-    make -C "$SUITE" || exit 2
+    make -C "$SUITE" > /dev/null || exit 2
 fi
+export FRONTEND
 
 # work out the number of this run from the run folders that already exist
 PREVIOUS=$(ls -d "$SUITE"/results/run_[0-9][0-9]* 2>/dev/null | wc -l)

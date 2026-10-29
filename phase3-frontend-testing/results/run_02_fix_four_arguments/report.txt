@@ -1,0 +1,21 @@
+Run: run_02_fix_four_arguments
+Date: 2026-10-29 14:55
+Machine: Darwin arm64
+Front End: distribution-system
+Total: 74   Passed: 73   Failed: 1
+
+Per group (passed / total):
+  addcredit      7 / 7
+  bad_files      4 / 4
+  buy            8 / 8
+  create         8 / 9
+  delete         6 / 6
+  general        5 / 5
+  list           5 / 5
+  login          8 / 8
+  logout         3 / 3
+  refund         8 / 8
+  sell           11 / 11
+
+Failed tests (and which check failed):
+  create_create_duplicate_deleted_this_session  (failed: daily terminal)

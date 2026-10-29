@@ -6,7 +6,7 @@ Session::Session(const FilePaths& newFilePaths)
     : filePaths(newFilePaths), loggedIn(false), currentUsername("") {
 }
 
-// Returns the three file names.
+// Returns the four file names.
 const FilePaths& Session::getFilePaths() const {
     return filePaths;
 }
