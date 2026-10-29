@@ -1,0 +1,1 @@
+Admin creates FifteenCharUser which is exactly 15 characters so it is accepted as the boundary maximum and writes an 01 line plus 00.

@@ -1,0 +1,5 @@
+login
+MoonlitKai
+addcredit
+50.00
+logout

@@ -1,0 +1,1 @@
+Transaction word Login with wrong case while logged in is refused with invalid transaction because codes are case-sensitive and is never written.

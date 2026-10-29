@@ -1,0 +1,22 @@
+1,21d0
+< Enter transaction:
+< Enter username:
+< Login successful.
+< Enter transaction:
+< Enter buyer username:
+< Enter seller username:
+< Enter amount of credit:
+< ERROR: invalid amount
+< Enter transaction:
+< Enter buyer username:
+< Enter seller username:
+< Enter amount of credit:
+< ERROR: invalid amount
+< Enter transaction:
+< Enter buyer username:
+< Enter seller username:
+< Enter amount of credit:
+< ERROR: invalid amount
+< Enter transaction:
+< Logout successful.
+< Enter transaction:

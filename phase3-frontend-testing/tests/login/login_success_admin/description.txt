@@ -1,0 +1,1 @@
+Login as admin QuillFox9 succeeds and logout writes a 00 line because the session was authenticated and closed normally.

@@ -1,0 +1,9 @@
+login
+QuillFox9
+sell
+Fresh Copper Ledger
+12.00
+buy
+Fresh Copper Ledger
+QuillFox9
+logout

@@ -1,0 +1,1 @@
+Buy attempted by sell-standard CraterJax is refused with not allowed for this account type before any buy prompts and is never written.

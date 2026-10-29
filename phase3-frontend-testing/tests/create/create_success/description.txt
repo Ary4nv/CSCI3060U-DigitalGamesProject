@@ -1,0 +1,1 @@
+Admin creates NewTester as FS successfully so the daily file gets an 01 line with zero credit followed by the logout 00 line.

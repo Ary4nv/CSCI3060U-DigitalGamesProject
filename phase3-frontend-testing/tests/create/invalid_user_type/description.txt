@@ -1,0 +1,1 @@
+Admin create rejects an unsupported account type and writes only the logout record.

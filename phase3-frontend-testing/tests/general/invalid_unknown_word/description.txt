@@ -1,0 +1,1 @@
+Unknown word frobnicate while logged in is refused with invalid transaction and is never written to the daily file.

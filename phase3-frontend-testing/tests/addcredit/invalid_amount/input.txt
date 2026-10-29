@@ -1,0 +1,9 @@
+login
+QuillFox9
+addcredit
+lots
+addcredit
+0.00
+addcredit
+-1.00
+logout

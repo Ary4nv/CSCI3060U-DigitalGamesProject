@@ -1,0 +1,1 @@
+Login with an empty username line is refused with invalid username and the next logout is refused because no session started so no daily file is written.

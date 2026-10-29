@@ -1,0 +1,74 @@
+FAIL addcredit_admin_adds_to_other addcredit daily terminal
+FAIL addcredit_exactly_session_limit addcredit daily terminal
+FAIL addcredit_invalid_amount addcredit daily terminal
+FAIL addcredit_over_max_credit addcredit daily terminal
+FAIL addcredit_over_session_limit addcredit daily terminal
+FAIL addcredit_standard_adds_own addcredit daily terminal
+FAIL addcredit_unknown_user addcredit daily terminal
+FAIL bad_files_corrupt_accounts_file bad_files terminal
+FAIL bad_files_corrupt_games_file bad_files terminal
+FAIL bad_files_missing_accounts_file bad_files terminal
+FAIL bad_files_missing_games_file bad_files terminal
+FAIL buy_admin_can_buy buy daily terminal
+FAIL buy_already_owned buy daily terminal
+FAIL buy_buying_own_game buy daily terminal
+FAIL buy_game_not_found buy daily terminal
+FAIL buy_new_listing_same_session buy daily terminal
+FAIL buy_not_enough_credit buy daily terminal
+FAIL buy_seller_over_max_credit buy daily terminal
+FAIL buy_successful_buy buy daily terminal
+FAIL create_create_as_nonadmin create daily terminal
+FAIL create_create_duplicate_deleted_this_session create daily terminal
+FAIL create_create_duplicate_existing create daily terminal
+FAIL create_create_empty_username create daily terminal
+FAIL create_create_end_username create daily terminal
+FAIL create_create_success_15char create daily terminal
+FAIL create_create_success create daily terminal
+FAIL create_create_too_long create daily terminal
+FAIL create_invalid_user_type create daily terminal
+FAIL delete_delete_as_nonadmin delete daily terminal
+FAIL delete_delete_empty_username delete daily terminal
+FAIL delete_delete_end_username delete daily terminal
+FAIL delete_delete_nonexistent delete daily terminal
+FAIL delete_delete_self_admin delete daily terminal
+FAIL delete_delete_success delete daily terminal
+FAIL general_invalid_empty_line general daily terminal
+FAIL general_invalid_unknown_word general daily terminal
+FAIL general_invalid_wrong_case general daily terminal
+FAIL general_permission_buy_as_sellstandard general daily terminal
+FAIL general_permission_sell_as_buystandard general daily terminal
+FAIL list_games_for_sale list daily terminal
+FAIL list_nothing_for_sale list daily terminal
+FAIL list_read_only list daily terminal
+FAIL list_reflects_new_listing list daily terminal
+FAIL list_stays_after_purchase list daily terminal
+FAIL login_login_case_mismatch login terminal
+FAIL login_login_empty_username login terminal
+FAIL login_login_end_username login terminal
+FAIL login_login_second_login_refused login daily terminal
+FAIL login_login_success_admin login daily terminal
+FAIL login_login_success_standard login daily terminal
+FAIL login_login_unknown_user login terminal
+FAIL login_transactions_before_login login daily terminal
+FAIL logout_logout_after_logout logout daily terminal
+FAIL logout_logout_blocks_until_login logout daily terminal
+FAIL logout_logout_not_logged_in logout terminal
+FAIL refund_buyer_over_max_credit refund daily terminal
+FAIL refund_invalid_amount refund daily terminal
+FAIL refund_refund_as_nonadmin refund daily terminal
+FAIL refund_same_person_twice refund daily terminal
+FAIL refund_seller_not_enough_credit refund daily terminal
+FAIL refund_successful_refund refund daily terminal
+FAIL refund_unknown_person refund daily terminal
+FAIL refund_unknown_seller refund daily terminal
+FAIL sell_admin_can_sell sell daily terminal
+FAIL sell_invalid_price sell daily terminal
+FAIL sell_name_already_listed sell daily terminal
+FAIL sell_name_END sell daily terminal
+FAIL sell_name_exactly_25 sell daily terminal
+FAIL sell_name_too_long sell daily terminal
+FAIL sell_price_at_max sell daily terminal
+FAIL sell_price_over_max sell daily terminal
+FAIL sell_sellstandard_can_sell sell daily terminal
+FAIL sell_successful_sell sell daily terminal
+FAIL sell_whole_dollar_price sell daily terminal

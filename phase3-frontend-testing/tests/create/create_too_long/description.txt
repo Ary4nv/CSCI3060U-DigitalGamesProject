@@ -1,0 +1,1 @@
+Create with 16-character SixteenCharUser1 is refused with username too long without asking for user type and is never written to the daily file.

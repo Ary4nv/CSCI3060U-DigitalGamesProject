@@ -1,0 +1,1 @@
+A second login while QuillFox9 is logged in is refused with already logged in without asking for a username and only the final logout writes the 00 line.

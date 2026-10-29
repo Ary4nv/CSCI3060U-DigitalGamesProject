@@ -1,0 +1,94 @@
+Run: run_01_first_run_phase2_code
+Date: 2026-10-29 14:49
+Machine: Darwin arm64
+Front End: distribution-system
+Total: 74   Passed: 0   Failed: 74
+
+Per group (passed / total):
+  addcredit      0 / 7
+  bad_files      0 / 4
+  buy            0 / 8
+  create         0 / 9
+  delete         0 / 6
+  general        0 / 5
+  list           0 / 5
+  login          0 / 8
+  logout         0 / 3
+  refund         0 / 8
+  sell           0 / 11
+
+Failed tests (and which check failed):
+  addcredit_admin_adds_to_other  (failed: daily terminal)
+  addcredit_exactly_session_limit  (failed: daily terminal)
+  addcredit_invalid_amount  (failed: daily terminal)
+  addcredit_over_max_credit  (failed: daily terminal)
+  addcredit_over_session_limit  (failed: daily terminal)
+  addcredit_standard_adds_own  (failed: daily terminal)
+  addcredit_unknown_user  (failed: daily terminal)
+  bad_files_corrupt_accounts_file  (failed: terminal)
+  bad_files_corrupt_games_file  (failed: terminal)
+  bad_files_missing_accounts_file  (failed: terminal)
+  bad_files_missing_games_file  (failed: terminal)
+  buy_admin_can_buy  (failed: daily terminal)
+  buy_already_owned  (failed: daily terminal)
+  buy_buying_own_game  (failed: daily terminal)
+  buy_game_not_found  (failed: daily terminal)
+  buy_new_listing_same_session  (failed: daily terminal)
+  buy_not_enough_credit  (failed: daily terminal)
+  buy_seller_over_max_credit  (failed: daily terminal)
+  buy_successful_buy  (failed: daily terminal)
+  create_create_as_nonadmin  (failed: daily terminal)
+  create_create_duplicate_deleted_this_session  (failed: daily terminal)
+  create_create_duplicate_existing  (failed: daily terminal)
+  create_create_empty_username  (failed: daily terminal)
+  create_create_end_username  (failed: daily terminal)
+  create_create_success_15char  (failed: daily terminal)
+  create_create_success  (failed: daily terminal)
+  create_create_too_long  (failed: daily terminal)
+  create_invalid_user_type  (failed: daily terminal)
+  delete_delete_as_nonadmin  (failed: daily terminal)
+  delete_delete_empty_username  (failed: daily terminal)
+  delete_delete_end_username  (failed: daily terminal)
+  delete_delete_nonexistent  (failed: daily terminal)
+  delete_delete_self_admin  (failed: daily terminal)
+  delete_delete_success  (failed: daily terminal)
+  general_invalid_empty_line  (failed: daily terminal)
+  general_invalid_unknown_word  (failed: daily terminal)
+  general_invalid_wrong_case  (failed: daily terminal)
+  general_permission_buy_as_sellstandard  (failed: daily terminal)
+  general_permission_sell_as_buystandard  (failed: daily terminal)
+  list_games_for_sale  (failed: daily terminal)
+  list_nothing_for_sale  (failed: daily terminal)
+  list_read_only  (failed: daily terminal)
+  list_reflects_new_listing  (failed: daily terminal)
+  list_stays_after_purchase  (failed: daily terminal)
+  login_login_case_mismatch  (failed: terminal)
+  login_login_empty_username  (failed: terminal)
+  login_login_end_username  (failed: terminal)
+  login_login_second_login_refused  (failed: daily terminal)
+  login_login_success_admin  (failed: daily terminal)
+  login_login_success_standard  (failed: daily terminal)
+  login_login_unknown_user  (failed: terminal)
+  login_transactions_before_login  (failed: daily terminal)
+  logout_logout_after_logout  (failed: daily terminal)
+  logout_logout_blocks_until_login  (failed: daily terminal)
+  logout_logout_not_logged_in  (failed: terminal)
+  refund_buyer_over_max_credit  (failed: daily terminal)
+  refund_invalid_amount  (failed: daily terminal)
+  refund_refund_as_nonadmin  (failed: daily terminal)
+  refund_same_person_twice  (failed: daily terminal)
+  refund_seller_not_enough_credit  (failed: daily terminal)
+  refund_successful_refund  (failed: daily terminal)
+  refund_unknown_person  (failed: daily terminal)
+  refund_unknown_seller  (failed: daily terminal)
+  sell_admin_can_sell  (failed: daily terminal)
+  sell_invalid_price  (failed: daily terminal)
+  sell_name_already_listed  (failed: daily terminal)
+  sell_name_END  (failed: daily terminal)
+  sell_name_exactly_25  (failed: daily terminal)
+  sell_name_too_long  (failed: daily terminal)
+  sell_price_at_max  (failed: daily terminal)
+  sell_price_over_max  (failed: daily terminal)
+  sell_sellstandard_can_sell  (failed: daily terminal)
+  sell_successful_sell  (failed: daily terminal)
+  sell_whole_dollar_price  (failed: daily terminal)

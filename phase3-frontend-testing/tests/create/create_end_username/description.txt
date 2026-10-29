@@ -1,0 +1,1 @@
+Create with new username END is refused with invalid username without asking for user type and is never written to the daily file.

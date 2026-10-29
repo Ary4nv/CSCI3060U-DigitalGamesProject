@@ -1,0 +1,1 @@
+Login as full-standard MoonlitKai succeeds and logout writes a 00 line because any existing user may start a session.

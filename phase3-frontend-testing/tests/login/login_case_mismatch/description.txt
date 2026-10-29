@@ -1,0 +1,1 @@
+Login with quillfox9 in lower case is refused with no such user because usernames are case-sensitive so no session starts.

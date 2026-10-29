@@ -1,0 +1,1 @@
+Login with unknown GhostAccount99 is refused with no such user and the following logout is refused with please login first because nobody ever logged in so no daily file exists.
