@@ -6,7 +6,8 @@ Enter username to delete:
 User deleted.
 Enter transaction:
 Enter new username:
-ERROR: username already exists
+Enter user type (AA, FS, BS, SS):
+User created.
 Enter transaction:
 Logout successful.
 Enter transaction:

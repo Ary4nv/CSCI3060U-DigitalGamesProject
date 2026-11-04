@@ -1,1 +1,1 @@
-Create of Nimbus2 after deleting Nimbus2 in the same session is still refused with username already exists so only the 02 delete and 00 logout are written.
+Nimbus2 is deleted then created again in the same session, which is allowed, so the daily file gets the 02, 01 and 00 lines.

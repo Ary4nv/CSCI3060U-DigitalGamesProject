@@ -1,0 +1,10 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter amount of credit:
+Enter username:
+ERROR: credit limit exceeded
+Enter transaction:
+Logout successful.
+Enter transaction:
