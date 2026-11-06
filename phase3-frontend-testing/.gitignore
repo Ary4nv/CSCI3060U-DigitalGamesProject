@@ -1,3 +1,5 @@
 distribution-system
 results/latest
 .DS_Store
+distribution-system.exe
+results/latest*
