@@ -9,6 +9,7 @@
 #include "LoginTransaction.h"
 #include "LogoutTransaction.h"
 #include "RefundTransaction.h"
+#include "SearchTransaction.h"
 #include "SellTransaction.h"
 
 // Keeps the console and session to hand to each transaction it makes.
@@ -48,6 +49,9 @@ std::unique_ptr<Transaction> TransactionFactory::create(const std::string& comma
     }
     if (command == Constants::LIST_ACCOUNTS_COMMAND) {
         return std::unique_ptr<Transaction>(new ListAccountsTransaction(console, session));
+    }
+    if (command == Constants::SEARCH_COMMAND) {
+        return std::unique_ptr<Transaction>(new SearchTransaction(console, session));
     }
     return std::unique_ptr<Transaction>();
 }

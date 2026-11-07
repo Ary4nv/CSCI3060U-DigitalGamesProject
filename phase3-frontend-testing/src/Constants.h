@@ -94,6 +94,7 @@ namespace Constants
     const std::string ADD_CREDIT_COMMAND = "addcredit";
     const std::string LIST_COMMAND = "list";
     const std::string LIST_ACCOUNTS_COMMAND = "listaccounts";
+    const std::string SEARCH_COMMAND = "search";
 }
 
 #endif

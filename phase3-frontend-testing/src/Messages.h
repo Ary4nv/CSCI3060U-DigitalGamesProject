@@ -23,6 +23,7 @@ namespace Messages
     const std::string SELLER_USERNAME_PROMPT = "Enter seller username:";
     const std::string BUYER_USERNAME_PROMPT = "Enter buyer username:";
     const std::string CREDIT_AMOUNT_PROMPT = "Enter amount of credit:";
+    const std::string SEARCH_TEXT_PROMPT = "Enter search text:";
 
     // ----- Confirmations (printed when a transaction succeeds) -----
 
@@ -48,6 +49,17 @@ namespace Messages
 
     // Placed between the columns of a list row, as in "name | seller | price".
     const std::string LIST_COLUMN_SEPARATOR = " | ";
+
+    // ----- Search output -----
+
+    // Heading printed before the games whose name contains the search text.
+    const std::string GAMES_FOUND_HEADING = "Games found:";
+
+    // Heading printed before the users whose username contains the search text.
+    const std::string USERS_FOUND_HEADING = "Users found:";
+
+    // Printed when no game and no user matches the search text.
+    const std::string NO_MATCHES_FOUND = "No matches found.";
 
     // ----- Errors -----
 
@@ -97,6 +109,9 @@ namespace Messages
     const std::string NOT_ENOUGH_CREDIT = "not enough credit";
     const std::string CREDIT_LIMIT_EXCEEDED = "credit limit exceeded";
     const std::string SESSION_CREDIT_LIMIT_EXCEEDED = "session credit limit of 1000.00 exceeded";
+
+    // Search errors
+    const std::string INVALID_SEARCH_TEXT = "invalid search text";
 }
 
 #endif
