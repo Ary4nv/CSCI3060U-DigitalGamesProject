@@ -12,7 +12,7 @@ Project board: [Front End Tests Board](https://github.com/users/Ary4nv/projects/
 |---|---|---|
 | `phase1-frontend-tests/` | 74 requirements tests, test plan, scripts | 1 |
 | `phase2-frontend-prototype/` | Front End prototype (C++11), design document | 2 |
-| `phase3-frontend-testing/` | final Front End, 95 tests, test scripts, results of every run, failure log | 3 |
+| `phase3-frontend-testing/` | final Front End, 98 tests, test scripts, results of every run, failure log | 3 |
 | `phase4-backend-prototype/` | not started | 4 |
 | `phase5-backend-testing/` | not started | 5 |
 | `phase6-integration-delivery/` | not started | 6 |
@@ -26,7 +26,7 @@ Project board: [Front End Tests Board](https://github.com/users/Ary4nv/projects/
 | | Team files: scripts, `test_plan.md`, `requirements_decisions.md`, `HANDIN.md`. | |
 | **2 - Front End prototype** | `FrontEnd`, `TransactionFactory`, `Transaction`, `Session`, `RecordFile`, `AccountRegistry`, `GameCatalog`, `DailyTransactionLog`, and the login, sell, buy, refund and addcredit transactions. | `Constants.h`, `Messages.h`, `FieldFormat`, `Console`, `Account`, `Game`, the logout, create, delete, list and listaccounts transactions, `main.cpp` and the Makefile. |
 | | Design document: team (the file split is in Section 8 of the document). | |
-| **3 - Front End requirements testing** | The test scripts (`run_all_tests.sh`, `run_tests.sh`, `compare_daily.sh`, `compare_terminal.sh`, `compare_runs.sh`), the 4 file name command line (`main.cpp`, `Session`), the Makefile and program name, runs 1 and 2, the Slack questions to the client, the failure log, the README files. | Fixed the wrong create test, wrote the 21 new tests (15 `search`, 6 `listaccounts`), wrote `SearchTransaction` and its changes in `Constants.h`, `Messages.h` and `TransactionFactory.cpp`, runs 3, 4 and 5 (on Windows with Git Bash). |
+| **3 - Front End requirements testing** | The test scripts (`run_all_tests.sh`, `run_tests.sh`, `compare_daily.sh`, `compare_terminal.sh`, `compare_runs.sh`), the 4 file name command line (`main.cpp`, `Session`), the Makefile and program name, runs 1, 2, 6, 7 and 8, the overflow fix and tests (F18), the exit code check in `run_all_tests.sh` (H2), the Slack questions to the client, the failure log, the README files. | Fixed the wrong create test, wrote the 21 new tests (15 `search`, 6 `listaccounts`), wrote `SearchTransaction` and its changes in `Constants.h`, `Messages.h` and `TransactionFactory.cpp`, runs 3, 4 and 5 (on Windows with Git Bash). |
 | **4 - Back End prototype** | not started | not started |
 | **5 - Back End unit testing** | not started | not started |
 | **6 - Integration and delivery** | not started | not started |
@@ -58,6 +58,6 @@ The design document is `phase2-frontend-prototype/doc/Phase2_Design_Document.pdf
     ./distribution-system currentaccounts.txt availablegames.txt gamescollection.txt transout.atf < input.txt
     ./scripts/run_all_tests.sh
 
-On Windows (Git Bash) use `mingw32-make` instead of `make`. `run_all_tests.sh` builds the program, runs all 95 tests, checks the daily files and the terminal output, and saves everything in a new `results/run_NN` folder. The failure log is `phase3-frontend-testing/doc/Phase3_Failure_Log.pdf` and the details are in `phase3-frontend-testing/README.md`.
+On Windows use Git Bash or WSL (`make` has to work in that shell, see the Phase 3 README). `run_all_tests.sh` builds the program, runs all 98 tests, checks the daily files and the terminal output, and saves everything in a new `results/run_NN` folder. The failure log is `phase3-frontend-testing/doc/Phase3_Failure_Log.pdf` and the details are in `phase3-frontend-testing/README.md`.
 
 Needs g++ with C++11 and bash.

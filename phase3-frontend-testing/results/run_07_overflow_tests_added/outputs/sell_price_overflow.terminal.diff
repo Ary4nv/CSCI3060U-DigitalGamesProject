@@ -1,0 +1,12 @@
+7c7
+< ERROR: invalid price
+---
+> Game put up for sale.
+10,11c10
+< Enter price:
+< ERROR: invalid price
+---
+> ERROR: game already for sale
+12a12,13
+> ERROR: invalid transaction
+> Enter transaction:

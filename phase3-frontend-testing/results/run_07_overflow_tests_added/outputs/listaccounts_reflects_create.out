@@ -1,0 +1,21 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter new username:
+Enter user type (AA, FS, BS, SS):
+User created.
+Enter transaction:
+Active accounts:
+QuillFox9 | AA | 500.00
+ByteHarbor | AA | 0.00
+MoonlitKai | FS | 200.00
+Thistledown7 | BS | 100.00
+CraterJax | SS | 50.00
+Nimbus2 | FS | 5.00
+SilverQuasar1 | FS | 999950.00
+ShadowLynxRider | FS | 100.00
+NewTester | FS | 0.00
+Enter transaction:
+Logout successful.
+Enter transaction:

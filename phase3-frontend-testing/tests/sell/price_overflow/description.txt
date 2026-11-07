@@ -1,0 +1,1 @@
+Seller types two prices far too big for a number; both refused as invalid price, nothing is listed, only the 00 line is written.

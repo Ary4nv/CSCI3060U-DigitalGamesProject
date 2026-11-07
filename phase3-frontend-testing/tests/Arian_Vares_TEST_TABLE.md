@@ -9,6 +9,7 @@ Scope: Arian Vares only. Fixtures: per-test `accounts.txt` (28 chars/line), per-
 | sell/price_at_max               | Price of exactly 999.99 is accepted (boundary)                                                                 |
 | sell/name_already_listed        | Game name already for sale by a different seller; refused, since uniqueness is checked globally across sellers |
 | sell/name_too_long              | 26-character game name refused before the price prompt                                                         |
+| sell/price_overflow             | Two prices far too big for a number; refused as invalid price (found after run 6, see failure F18)                         |
 | sell/invalid_price              | Price is not a number; refused without crashing                                                                |
 | sell/name_exactly_25            | 25-character game name accepted (boundary)                                                                     |
 | sell/name_END                   | END is the file's end marker, so it can't be used as a game name                                               |
@@ -28,12 +29,14 @@ Scope: Arian Vares only. Fixtures: per-test `accounts.txt` (28 chars/line), per-
 | refund/same_person_twice        | Same username entered as buyer and seller; refused before an amount is asked                                   |
 | refund/seller_not_enough_credit | Seller's credit is below the refund amount; refused                                                            |
 | refund/buyer_over_max_credit    | Refund would push the buyer over the maximum account credit; refused                                           |
+| refund/amount_overflow          | Two amounts far too big for a number; refused as invalid amount (found after run 6, see failure F18)                       |
 | refund/invalid_amount           | Checks negative, zero, and nonnumeric amounts in one session; all refused                                            |
 | addcredit/admin_adds_to_other   | Admin adds credit to another user; amount is asked first, then the username                                    |
 | addcredit/standard_adds_own     | A standard user adds credit to their own account; only the amount is asked                                     |
 | addcredit/over_session_limit    | 1000.01 is over the session limit; refused                                                                     |
 | addcredit/exactly_session_limit | 1000.00 is the highest amount allowed in one session; accepted (boundary)                                      |
 | addcredit/over_max_credit       | Addition would push the account over the 999999.99 maximum; refused even though it's under the session limit     |
+| addcredit/amount_overflow       | Two amounts far too big for a number; refused as invalid amount (found after run 6, see failure F18)                       |
 | addcredit/invalid_amount        | Not a real number; refused without crashing                                                                    |
 | addcredit/unknown_user          | Admin names a username that doesn't exist; refused                                                             |
 | list/games_for_sale             | Lists every game currently for sale with name, seller, and price                                               |

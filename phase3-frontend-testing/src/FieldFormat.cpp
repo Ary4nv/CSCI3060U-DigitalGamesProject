@@ -6,6 +6,10 @@
 // Number of digits after the decimal point in every amount of money.
 static const int DECIMAL_DIGITS = 2;
 
+// Most digits allowed in the dollar part. Anything longer than this is far above
+// the maximum credit and price, and would overflow Cents when it is multiplied.
+static const int MAX_DOLLAR_DIGITS = 12;
+
 // The character that separates dollars from cents.
 static const char DECIMAL_POINT = '.';
 
@@ -60,6 +64,19 @@ std::string FieldFormat::moneyDisplay(Cents cents)
     return display.str();
 }
 
+// dollarPartFits
+// True if the dollar digits are short enough to turn into cents without
+// overflowing. Zeros at the front do not count ("0000005" is just 5).
+static bool dollarPartFits(const std::string& dollarDigits)
+{
+    std::string::size_type firstDigit = dollarDigits.find_first_not_of('0');
+    if (firstDigit == std::string::npos)
+    {
+        return true;
+    }
+    return static_cast<int>(dollarDigits.size() - firstDigit) <= MAX_DOLLAR_DIGITS;
+}
+
 // parseMoney
 // Reads typed money ("15", "15.5", "15.50") into cents. The text is split at
 // the dot into a dollars part and a cents part, and each part must be
@@ -81,7 +98,7 @@ bool FieldFormat::parseMoney(const std::string& text, Cents& cents)
         }
     }
 
-    if (!isAllDigits(dollarDigits))
+    if (!isAllDigits(dollarDigits) || !dollarPartFits(dollarDigits))
     {
         return false;
     }
@@ -113,6 +130,7 @@ bool FieldFormat::parseMoneyField(const std::string& field, Cents& cents)
 
     bool fieldIsValid = field[pointPosition] == DECIMAL_POINT
                         && isAllDigits(dollarDigits)
+                        && dollarPartFits(dollarDigits)
                         && isAllDigits(centDigits);
     if (!fieldIsValid)
     {

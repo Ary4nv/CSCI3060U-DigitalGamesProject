@@ -1,0 +1,1 @@
+Admin refunds with two amounts far too big for a number; both refused as invalid amount, only the 00 line is written.

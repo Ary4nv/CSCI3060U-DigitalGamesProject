@@ -42,7 +42,7 @@ Output files of one test called `sell_successful_sell` in a run folder:
 
 The four file names come from the command line, the transactions come from standard
 input and everything printed goes to standard output. Needs g++ with C++11.
-On Windows (Git Bash) use `mingw32-make` instead of `make`; the rest is the same.
+On Windows use Git Bash or WSL. `run_all_tests.sh` calls `make` by itself, so `make` has to work in that shell (with MinGW this means `mingw32-make` has to be available under the name `make`, for example by copying `mingw32-make.exe` to `make.exe`). With WSL a normal `make` works.
 
 The program is called `distribution-system` like in the handout. The games collection file
 is accepted but not opened: the Front End only writes the daily transaction file and the
@@ -100,12 +100,12 @@ A filter is part of a test path, for example `./scripts/run_tests.sh /tmp/out se
 
 ## Who did what
 
-- Arian Vares: the test scripts, the 4 file name command line (`main.cpp`, `Session`), the Makefile and program name, runs 1 and 2, the Slack questions, the failure log and the README files.
+- Arian Vares: the test scripts, the 4 file name command line (`main.cpp`, `Session`), the Makefile and program name, runs 1, 2, 6, 7 and 8, the Slack questions, the failure log and the README files. After run 6 a code review found that `FieldFormat` accepted amounts too big for the number type, so Arian also wrote the 3 overflow tests (`addcredit/amount_overflow`, `refund/amount_overflow`, `sell/price_overflow`) and fixed `FieldFormat::parseMoney` and `parseMoneyField` (failure F18), and changed `run_all_tests.sh` to fail a test on a wrong exit code (failure H2).
 - Victor Ma: the fix for the wrong create test, the 21 new tests (15 search, 6 listaccounts), `SearchTransaction` and its changes in `Constants.h`, `Messages.h` and `TransactionFactory.cpp`, runs 3, 4 and 5 (on Windows with Git Bash).
 
-Runs 1 and 2 were done on a Mac, runs 3 to 5 on Windows. The `.sh` scripts worked on both.
+Runs 1, 2, 6, 7 and 8 were done on a Mac, runs 3 to 5 on Windows. The `.sh` scripts worked on both.
 
 ## AI use and sharing
 
 Each of us hands in our own full AI history on Canvas. A copy of each is also kept in `ai_history/Phase 3/` at the top level of the GitHub repository (that folder is outside this zip).
-We are happy for other students to see our Front End (bonus mark eligible).
+We do not want our Front End shared with other students, so we are not eligible for the bonus marks.

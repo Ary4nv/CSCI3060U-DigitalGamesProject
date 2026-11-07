@@ -1,0 +1,10 @@
+6c6,7
+< ERROR: invalid amount
+---
+> Enter username:
+> ERROR: no such user
+8,9c9
+< Enter amount of credit:
+< ERROR: invalid amount
+---
+> ERROR: invalid transaction

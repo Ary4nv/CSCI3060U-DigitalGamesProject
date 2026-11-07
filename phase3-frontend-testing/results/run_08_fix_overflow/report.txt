@@ -1,0 +1,22 @@
+Run: run_08_fix_overflow
+Date: 2026-11-07 16:01
+Machine: Darwin arm64
+Front End: distribution-system
+Total: 98   Passed: 98   Failed: 0
+
+Per group (passed / total):
+  addcredit      8 / 8
+  bad_files      4 / 4
+  buy            8 / 8
+  create         9 / 9
+  delete         6 / 6
+  general        5 / 5
+  list           5 / 5
+  listaccounts   6 / 6
+  login          8 / 8
+  logout         3 / 3
+  refund         9 / 9
+  search         15 / 15
+  sell           12 / 12
+
+Failed tests (and which check failed):
