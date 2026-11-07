@@ -1,0 +1,15 @@
+5,6c5
+< Enter search text:
+< No matches found.
+---
+> ERROR: invalid transaction
+8,10c7,11
+< Enter search text:
+< Games found:
+< Glass Orchard | MoonlitKai | 25.50
+---
+> ERROR: invalid transaction
+> Enter transaction:
+> ERROR: invalid transaction
+> Enter transaction:
+> ERROR: invalid transaction

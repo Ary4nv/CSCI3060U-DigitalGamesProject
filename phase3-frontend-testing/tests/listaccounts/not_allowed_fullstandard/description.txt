@@ -1,0 +1,1 @@
+Full-standard MoonlitKai tries listaccounts and is refused with not allowed for this account type.

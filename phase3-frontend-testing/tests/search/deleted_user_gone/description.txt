@@ -1,0 +1,1 @@
+Admin QuillFox9 deletes Nimbus2 then searches Nimbus and the deleted user is not found.

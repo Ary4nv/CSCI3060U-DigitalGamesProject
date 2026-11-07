@@ -1,0 +1,1 @@
+MoonlitKai searches glass in lower case which finds nothing and then Glass which finds Glass Orchard because search is case sensitive.

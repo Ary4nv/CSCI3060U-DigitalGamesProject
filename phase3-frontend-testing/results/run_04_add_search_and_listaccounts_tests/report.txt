@@ -1,0 +1,37 @@
+Run: run_04_add_search_and_listaccounts_tests
+Date: 2026-11-06 18:55
+Machine: MINGW64_NT-10.0-26200 x86_64
+Front End: distribution-system
+Total: 95   Passed: 80   Failed: 15
+
+Per group (passed / total):
+  addcredit      7 / 7
+  bad_files      4 / 4
+  buy            8 / 8
+  create         9 / 9
+  delete         6 / 6
+  general        5 / 5
+  list           5 / 5
+  listaccounts   6 / 6
+  login          8 / 8
+  logout         3 / 3
+  refund         8 / 8
+  search         0 / 15
+  sell           11 / 11
+
+Failed tests (and which check failed):
+  search_admin_hidden_from_buystandard  (failed: terminal)
+  search_admin_not_selling_hidden_from_standard  (failed: terminal)
+  search_admin_not_selling_visible_to_admin  (failed: terminal)
+  search_admin_selling_visible_to_standard  (failed: terminal)
+  search_before_login  (failed: terminal)
+  search_case_sensitive  (failed: terminal)
+  search_deleted_user_gone  (failed: terminal)
+  search_empty_text  (failed: terminal)
+  search_game_name_only  (failed: terminal)
+  search_games_and_users  (failed: terminal)
+  search_games_substring  (failed: terminal)
+  search_no_results  (failed: terminal)
+  search_sees_new_listing  (failed: terminal)
+  search_sellstandard_can_search  (failed: terminal)
+  search_users_substring  (failed: terminal)

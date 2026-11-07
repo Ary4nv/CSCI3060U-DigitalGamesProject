@@ -1,0 +1,6 @@
+login
+QuillFox9
+delete
+Nimbus2
+listaccounts
+logout

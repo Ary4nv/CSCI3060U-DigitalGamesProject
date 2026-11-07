@@ -1,0 +1,12 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter search text:
+Games found:
+Driftwood Signal Nine | ShadowLynxRider | 50.00
+Users found:
+Nimbus2 | FS
+Enter transaction:
+Logout successful.
+Enter transaction:

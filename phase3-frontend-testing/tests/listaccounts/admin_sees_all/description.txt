@@ -1,0 +1,1 @@
+Admin QuillFox9 lists accounts and every account is printed as username | type | credit in file order with nothing written except the 00 line.
