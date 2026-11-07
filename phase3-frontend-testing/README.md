@@ -15,6 +15,7 @@ copy in `src/` here (it is the Phase 2 code plus the Phase 3 fixes in the failur
 | `scripts/` | the shell scripts that run the tests and check the results |
 | `results/run_NN_.../` | saved results of every test suite run (used for the failure log) |
 | `doc/` | the failure log document |
+| `requirements_problems.md` | the unclear or contradicting requirements and what we decided |
 
 Handout steps 1 to 3 (inputs, expected outputs, outputs): each test folder holds its
 own input and expected files, and the actual outputs of a run are saved in
@@ -55,7 +56,7 @@ cannot be tested in the Front End).
 
 That builds the program if needed, runs every test, checks the daily files and the terminal
 output, prints PASS/FAIL totals and saves everything in a new `results/run_NN` folder.
-It exits with 0 if everything passed. To give a run a name: `./scripts/run_all_tests.sh my_label`.
+It exits with 0 if everything passed. A test only passes if the terminal output and daily file match and the program exited with code 0 (a test folder can have an `expected_code.txt` with another number). If a helper script itself breaks the run stops with exit code 2. To give a run a name: `./scripts/run_all_tests.sh my_label`.
 
 | Script | What it does |
 |---|---|
@@ -90,6 +91,12 @@ A filter is part of a test path, for example `./scripts/run_tests.sh /tmp/out se
 
   Game lines are `name | seller | price`, user lines are `username | type` (no credit). All wording is in `src/Messages.h` and `src/Constants.h`.
 - Games collection file: the client said on Slack (Nov 2) that she cannot say without knowing our design, and that reusing the data we already have instead of making more files is fine. We kept it as an argument that the program does not open.
+
+## Phase 1 feedback and what we changed
+
+- *Provide screenshots of the AI interactions:* the AI histories for this phase (`ai_history/Phase 3/`) now come with screenshots next to the text files.
+- *Requirements problems missing in the project plan:* added `requirements_problems.md` and a new section in `phase1-frontend-tests/test_plan.md` that points to it.
+- *Are the games list and accounts needed in every test case?* The Front End needs both files to start, so every test still has them, but the 38 tests in `login`, `logout`, `create`, `delete`, `general` and `addcredit` never use games, so their `games.txt` now only has the END line. The other groups still use the full lists. The whole suite was run again after the change (run 6, 95 of 95).
 
 ## Who did what
 

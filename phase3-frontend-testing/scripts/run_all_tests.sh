@@ -7,6 +7,8 @@
 #   3. checks the daily files     (compare_daily.sh)
 #   4. checks the terminal output (compare_terminal.sh)
 #   5. writes a summary of this run
+# A test only passes if the exit code is 0 as well (or the number in the test
+# folder file expected_code.txt, if the test has one).
 # Every run gets its own folder in results/ (run_01, run_02, ...) so the old
 # runs stay there and can be used in the failure log.
 #
@@ -38,9 +40,13 @@ OUT="$RUN/outputs"
 mkdir -p "$OUT"
 
 echo "=== run $NUMBER ==="
-"$SUITE/scripts/run_tests.sh" "$OUT" > "$RUN/run_tests.log"
+# if one of the helper scripts itself breaks (not a test failing), stop right away
+# so a broken script can never look like a good run
+"$SUITE/scripts/run_tests.sh" "$OUT" > "$RUN/run_tests.log" || { echo "run_tests.sh failed, see $RUN/run_tests.log"; exit 2; }
 "$SUITE/scripts/compare_daily.sh" "$OUT" > "$RUN/daily_check.txt"
+if [ $? -gt 1 ]; then echo "compare_daily.sh broke"; exit 2; fi
 "$SUITE/scripts/compare_terminal.sh" "$OUT" > "$RUN/terminal_check.txt"
+if [ $? -gt 1 ]; then echo "compare_terminal.sh broke"; exit 2; fi
 
 # build summary.txt, one line per test:  PASS name group   or   FAIL name group <what failed>
 SUMMARY="$RUN/summary.txt"
@@ -59,10 +65,16 @@ for FILE in "$OUT"/*.code; do
     if grep -q "^FAIL $NAME\$" "$RUN/terminal_check.txt"; then
         WHY="$WHY terminal"
     fi
-    # 124 is a timeout, 126 and up means the program was not found or crashed
+    # the exit code must be 0 unless the test has an expected_code.txt saying otherwise
+    # (124 is a timeout, 126 and up means the program was not found or crashed)
     CODE="$(cat "$FILE")"
-    if [ "$CODE" -ge 124 ]; then
-        WHY="$WHY crash(exit_$CODE)"
+    WANTED=0
+    TESTDIR="$SUITE/tests/${GROUP}/${NAME#${GROUP}_}"
+    if [ -f "$TESTDIR/expected_code.txt" ]; then
+        WANTED="$(cat "$TESTDIR/expected_code.txt")"
+    fi
+    if [ "$CODE" != "$WANTED" ]; then
+        WHY="$WHY exit_$CODE(wanted_$WANTED)"
     fi
     TOTAL=$((TOTAL + 1))
     if [ -z "$WHY" ]; then

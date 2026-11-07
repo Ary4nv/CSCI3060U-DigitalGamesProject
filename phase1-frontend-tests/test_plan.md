@@ -109,6 +109,13 @@ If a professor/client answer changes one of our assumptions, we'll update the af
 
 The main unresolved issue for Phase 1 is starting credit on `create`. One Slack answer said a new user starts at 0, while a later answer said the user enters starting credit. For Phase 1 we're using the 0-credit version since that was the original answer and our create tests were already built around it. We can update it later if the client confirms something different after the communication blackout.
 
+## 8b. Requirements problems
+
+The places where the handout or the lab updates were unclear or contradicted each other, and what we decided, are listed in
+`phase3-frontend-testing/requirements_problems.md` (added after the Phase 1 feedback said this was missing from the plan).
+Each of us also keeps a longer list of problems for our own tests in `tests/Arian_Vares_REQUIREMENTS_PROBLEMS.md` and
+`tests/VICTOR_REQUIREMENTS_PROBLEMS.md`, and our open questions for the client are in the `*_OPEN_QUESTIONS.md` files.
+
 ## 9. GitHub
 
 Phase 1 stays in its own folder in the main project repo. Victor Ma and Arian Vares tests are merged into the same `tests/` tree rather than kept as separate suites.

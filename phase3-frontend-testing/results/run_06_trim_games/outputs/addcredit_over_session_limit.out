@@ -1,0 +1,10 @@
+Enter transaction:
+Enter username:
+Login successful.
+Enter transaction:
+Enter amount of credit:
+Enter username:
+ERROR: session credit limit of 1000.00 exceeded
+Enter transaction:
+Logout successful.
+Enter transaction:

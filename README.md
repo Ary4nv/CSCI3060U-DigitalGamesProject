@@ -8,28 +8,28 @@ Project board: [Front End Tests Board](https://github.com/users/Ary4nv/projects/
 
 ## Folders
 
-| Folder                         | What is in it                                                              | Phase |
-| ------------------------------ | -------------------------------------------------------------------------- | ----- |
-| `phase1-frontend-tests/`       | 74 requirements tests, test plan, scripts                                  | 1     |
-| `phase2-frontend-prototype/`   | Front End prototype (C++11), design document                               | 2     |
-| `phase3-frontend-testing/`     | final Front End, 95 tests, test scripts, results of every run, failure log | 3     |
-| `phase4-backend-prototype/`    | not started                                                                | 4     |
-| `phase5-backend-testing/`      | not started                                                                | 5     |
-| `phase6-integration-delivery/` | not started                                                                | 6     |
-| `ai_history/`                  | the AI prompt history of each person, one folder per phase                 | all   |
+| Folder | What is in it | Phase |
+|---|---|---|
+| `phase1-frontend-tests/` | 74 requirements tests, test plan, scripts | 1 |
+| `phase2-frontend-prototype/` | Front End prototype (C++11), design document | 2 |
+| `phase3-frontend-testing/` | final Front End, 95 tests, test scripts, results of every run, failure log | 3 |
+| `phase4-backend-prototype/` | not started | 4 |
+| `phase5-backend-testing/` | not started | 5 |
+| `phase6-integration-delivery/` | not started | 6 |
+| `ai_history/` | the AI prompt history of each person, one folder per phase | all |
 
 ## Who did what
 
-| Phase                                  | Arian Vares                                                                                                                                                                                                                                                                                   | Victor Ma                                                                                                                                                                                                                               |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1 - Front End requirements tests**   | 43 tests: `sell` (11), `buy` (8), `refund` (8), `addcredit` (7), `list` (5), `bad_files` (4). His own test table, requirements problems, open questions and review checklist (`tests/Arian_Vares_*.md`).                                                                                      | 31 tests: `login` (8), `logout` (3), `create` (9), `delete` (6), `general` (5). His own test table, requirements problems, open questions and review checklist (`tests/VICTOR_*.md`).                                                   |
-|                                        | Team files: scripts, `test_plan.md`, `requirements_decisions.md`, `HANDIN.md`.                                                                                                                                                                                                                |                                                                                                                                                                                                                                         |
-| **2 - Front End prototype**            | `FrontEnd`, `TransactionFactory`, `Transaction`, `Session`, `RecordFile`, `AccountRegistry`, `GameCatalog`, `DailyTransactionLog`, and the login, sell, buy, refund and addcredit transactions.                                                                                               | `Constants.h`, `Messages.h`, `FieldFormat`, `Console`, `Account`, `Game`, the logout, create, delete, list and listaccounts transactions, `main.cpp` and the Makefile.                                                                  |
-|                                        | Design document: team (the file split is in Section 8 of the document).                                                                                                                                                                                                                       |                                                                                                                                                                                                                                         |
+| Phase | Arian Vares | Victor Ma |
+|---|---|---|
+| **1 - Front End requirements tests** | 43 tests: `sell` (11), `buy` (8), `refund` (8), `addcredit` (7), `list` (5), `bad_files` (4). His own test table, requirements problems, open questions and review checklist (`tests/Arian_Vares_*.md`). | 31 tests: `login` (8), `logout` (3), `create` (9), `delete` (6), `general` (5). His own test table, requirements problems, open questions and review checklist (`tests/VICTOR_*.md`). |
+| | Team files: scripts, `test_plan.md`, `requirements_decisions.md`, `HANDIN.md`. | |
+| **2 - Front End prototype** | `FrontEnd`, `TransactionFactory`, `Transaction`, `Session`, `RecordFile`, `AccountRegistry`, `GameCatalog`, `DailyTransactionLog`, and the login, sell, buy, refund and addcredit transactions. | `Constants.h`, `Messages.h`, `FieldFormat`, `Console`, `Account`, `Game`, the logout, create, delete, list and listaccounts transactions, `main.cpp` and the Makefile. |
+| | Design document: team (the file split is in Section 8 of the document). | |
 | **3 - Front End requirements testing** | The test scripts (`run_all_tests.sh`, `run_tests.sh`, `compare_daily.sh`, `compare_terminal.sh`, `compare_runs.sh`), the 4 file name command line (`main.cpp`, `Session`), the Makefile and program name, runs 1 and 2, the Slack questions to the client, the failure log, the README files. | Fixed the wrong create test, wrote the 21 new tests (15 `search`, 6 `listaccounts`), wrote `SearchTransaction` and its changes in `Constants.h`, `Messages.h` and `TransactionFactory.cpp`, runs 3, 4 and 5 (on Windows with Git Bash). |
-| **4 - Back End prototype**             | not started                                                                                                                                                                                                                                                                                   | not started                                                                                                                                                                                                                             |
-| **5 - Back End unit testing**          | not started                                                                                                                                                                                                                                                                                   | not started                                                                                                                                                                                                                             |
-| **6 - Integration and delivery**       | not started                                                                                                                                                                                                                                                                                   | not started                                                                                                                                                                                                                             |
+| **4 - Back End prototype** | not started | not started |
+| **5 - Back End unit testing** | not started | not started |
+| **6 - Integration and delivery** | not started | not started |
 
 Each of us hands in our own AI history for every phase (see `ai_history/`), and each of us fills in the Group Feedback Form. Commits in Phase 1 show under one account because Victor's git identity was not set at the time (his commits show under his own name from Phase 2 on).
 
